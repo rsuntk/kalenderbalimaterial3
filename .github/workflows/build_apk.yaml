@@ -33,7 +33,7 @@ jobs:
             echo 'android.native.buildOutput=verbose'
           } >> gradle.properties
           sed -i 's/org.gradle.configuration-cache=true//g' gradle.properties
-          ./gradlew clean assembleRelease
+          chmod +x ./gradlew && ./gradlew clean assembleRelease
 
       - name: Get APK path
         id: getApkPath
